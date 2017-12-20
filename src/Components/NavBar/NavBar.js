@@ -7,7 +7,7 @@ const NavBar = () => {
   return(
     <div className='nav-bar'>
       <h1>WAG.BoG</h1>
-      <NavLink className='nav' to='/'>Home</NavLink>
+      <NavLink className='nav' exact to='/'>Home</NavLink>
       <NavLink className='nav' to='/search'>Search</NavLink>
       <NavLink className='nav' to='/map'>Map</NavLink>
     </div>
