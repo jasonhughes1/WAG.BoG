@@ -10,10 +10,11 @@ import { BrowserRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import promise from 'redux-promise';
+import RootReducers from './Reducers/RootReducers';
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 const middleware = applyMiddleware(thunk, promise, logger)
-const store = createStore(compose(middleware, devTools))
+const store = createStore(RootReducers, compose(middleware, devTools))
 
 render(
   <BrowserRouter>
