@@ -1,7 +1,7 @@
-const dogs = (state = {}, action) => {
+const dogs = (state = [], action) => {
   switch (action.type) {
   case 'DOG_SUCCESS':
-    return action.dogs;
+    return [...state, action.dogs];
   default:
     return state;
   }

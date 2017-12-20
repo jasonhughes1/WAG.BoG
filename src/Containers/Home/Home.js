@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import RootReducers from '../../Reducers/RootReducers';
 import { connect } from 'react-redux';
-import { fetchDogSuccess} from '../../Actions/Actions'
+import { fetchDogSuccess, fetchDogs} from '../../Actions/Actions'
 
 
 class Home extends Component {
+
+componentDidMount() {
+  this.props.getAllDogs()
+}
+
   render() {
   return(
     <div>
@@ -25,7 +30,7 @@ const mapStateToProps = (store) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getAllDogs: (newDogs) => {
-      dispatch(fetchDogSuccess(newDogs));
+      dispatch(fetchDogs(newDogs));
     }
   }
 }

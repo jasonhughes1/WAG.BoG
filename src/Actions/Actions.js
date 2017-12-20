@@ -7,9 +7,9 @@ export const fetchDogSuccess = dogs => {
 
 export const fetchDogs = () => {
   return dispatch => {
-    fetch('http://api.petfinder.com/pet.getRandom?key=ff2ba3ff151ed0332df60d1672e67959&shelterid=KY305&output=full&format=json')
+    fetch('https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=colorado&animal=dog&format=json')
       .then(response => response.json())
-      .then(results => dispatch(fetchDogSuccess(results.data)))
+      .then(results => dispatch(fetchDogSuccess(results.petfinder.pets.pet)))
       .catch(error => alert('error from fetch dogs call'))
   };
 };
