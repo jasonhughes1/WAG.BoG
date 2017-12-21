@@ -1,3 +1,29 @@
+
+import { getPosition } from 'redux-effects-geolocation';
+import { store } from '../index.js';
+
+
+export const fetchLocationSuccess = location => {
+  return {
+    type: 'LOCATION_SUCCESS',
+    location
+  }
+}
+
+export const postLocation = (dataObject) => {
+  return dispatch => { fetch('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDOxCWI5v69dw3ljge9fiJHdsC8BGrMbvE', {
+    method: 'POST',
+    body: JSON.stringify(dataObject),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }) .then(response => response.json())
+  .then(result => dispatch(fetchLocationSuccess(result.location)))
+  .catch(error => alert('error from location'))
+  }
+}
+
+
 export const fetchDogSuccess = dogs => {
   return {
     type: 'DOG_SUCCESS',

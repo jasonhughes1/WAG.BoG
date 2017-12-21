@@ -1,4 +1,4 @@
-const dogs = (state = [], action) => {
+export const dogs = (state = [], action) => {
   switch (action.type) {
   case 'DOG_SUCCESS':
     return [...state, action.dogs];
@@ -7,4 +7,11 @@ const dogs = (state = [], action) => {
   }
 };
 
-export default dogs;
+export const location = (state = [], action) => {
+  switch (action.type) {
+    case 'LOCATION_SUCCESS':
+      return [...state, action.location];
+    default:
+      return state;
+  }
+}
