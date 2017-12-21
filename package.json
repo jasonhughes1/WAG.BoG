@@ -7,16 +7,18 @@
     "npm-run-all": "^4.1.2",
     "npm-watch": "^0.3.0",
     "pet-finder-api": "^1.0.1",
+    "petfinder": "latest",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-geolocated": "^2.2.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
+    "redux-effects-geolocation": "^1.0.2",
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0",
-    "petfinder": "latest"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start-js": "react-scripts start",

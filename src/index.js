@@ -11,10 +11,19 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import promise from 'redux-promise';
 import RootReducers from './Reducers/RootReducers';
+import geoMiddleware from 'redux-effects-geolocation';
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 const middleware = applyMiddleware(thunk, promise, logger)
-const store = createStore(RootReducers, compose(middleware, devTools))
+export const store = createStore(
+  RootReducers,
+  devTools,
+  middleware,
+  applyMiddleware(
+    geoMiddleware()
+  )
+);
+
 
 render(
   <BrowserRouter>
