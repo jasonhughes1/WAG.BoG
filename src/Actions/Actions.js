@@ -1,6 +1,7 @@
 
 import { getPosition } from 'redux-effects-geolocation';
 import { store } from '../index.js';
+import helpers from '../Helpers/helpers'
 
 
 export const fetchLocationSuccess = location => {
@@ -35,7 +36,8 @@ export const fetchDogs = () => {
   return dispatch => {
     fetch('https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=colorado&animal=dog&format=json')
       .then(response => response.json())
-      .then(results => dispatch(fetchDogSuccess(results.petfinder.pets.pet)))
+      .then(response => helpers(response))
+      .then(results => dispatch(fetchDogSuccess(results)))
       .catch(error => alert('error from fetch dogs call'))
   };
 };

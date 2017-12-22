@@ -1,0 +1,116 @@
+{
+  "@encoding": "iso-8859-1",
+  "@version": "1.0",
+  "petfinder": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "lastOffset": {
+      "$t": "25"
+    },
+    "pets": {
+      "pet": [
+        {
+          "options": {
+            "option": [
+              {
+                "$t": "altered"
+              },
+              {
+                "$t": "housetrained"
+              }
+            ]
+          },
+          "status": {
+            "$t": "A"
+          },
+          "contact": {
+            "phone": {
+              "$t": "720-443-3748"
+            },
+            "state": {
+              "$t": "CO"
+            },
+            "address2": {},
+            "email": {
+              "$t": "rmprcontact@gmail.com"
+            },
+            "city": {
+              "$t": "Arvada"
+            },
+            "zip": {
+              "$t": "80003"
+            },
+            "fax": {},
+            "address1": {
+              "$t": "8031 Wadsworth Blvd"
+            }
+          },
+          "age": {
+            "$t": "Adult"
+          },
+          "size": {
+            "$t": "M"
+          },
+          "media": {
+            "photos": {
+              "photo": [
+                {
+                  "@size": "pnt",
+                  "$t": "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=60&-pnt.jpg",
+                  "@id": "1"
+                },
+                {
+                  "@size": "fpm",
+                  "$t": "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=95&-fpm.jpg",
+                  "@id": "1"
+                },
+                {
+                  "@size": "x",
+                  "$t": "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=500&-x.jpg",
+                  "@id": "1"
+                },
+                {
+                  "@size": "pn",
+                  "$t": "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=300&-pn.jpg",
+                  "@id": "1"
+                },
+                {
+                  "@size": "t",
+                  "$t": "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=50&-t.jpg",
+                  "@id": "1"
+                }
+              ]
+            }
+          },
+          "id": {
+            "$t": "39936980"
+          },
+          "shelterPetId": {},
+          "breeds": {
+            "breed": {
+              "$t": "Labrador Retriever"
+            }
+          },
+          "name": {
+            "$t": "Charms"
+          },
+          "sex": {
+            "$t": "F"
+          },
+          "description": {},
+          "mix": {
+            "$t": "yes"
+          },
+          "shelterId": {
+            "$t": "CO342"
+          },
+          "lastUpdate": {
+            "$t": "2017-11-17T05:56:23Z"
+          },
+          "animal": {
+            "$t": "Dog"
+          }
+        }
+      ]
+    }
+  }
+}
