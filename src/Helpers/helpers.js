@@ -5,7 +5,7 @@ const helpers = (data) => {
       name: dog.name.$t,
       breed: dog.breeds.breed.$t,
       sex: dog.sex.$t,
-      photo: dog.media.photos.photo[0].$t
+      photo: dog.media.photos.photo[3].$t
     })
   }))
   return completePets;

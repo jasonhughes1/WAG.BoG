@@ -1,11 +1,14 @@
 import React from 'react';
+import css from './Card.css'
 
 
 const Card = (props) => {
   return (
-    <div>
-      <h2 className='name'>{props.name}</h2>
-      <h3 className='breed'>{props.breed}</h3>
+    <div className='card'>
+      <h2 className='name'>Name: {props.name}</h2>
+      <h3 className='breed'>Breed:  {props.breed}</h3>
+      <h4 className='sex'>Sex: {props.sex}</h4>
+      <img className = 'picture' src={props.picture} />
     </div>
   )
 }

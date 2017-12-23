@@ -16,10 +16,13 @@ class Home extends Component {
     } else {
       console.log(this.props.dogs[0]);
       const dogCards = this.props.dogs[0].map((dog, index) => {
-
+        console.log(dog.photo);
         return <Card
-          name={dog.name}
+           name={dog.name}
           breed={dog.breed}
+            sex={dog.sex}
+        picture={dog.photo}
+
 
         />
       })
