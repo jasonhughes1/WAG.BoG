@@ -1,9 +1,17 @@
 .card {
+  border: 1px solid black;
+  margin: 5px;
+  background: #B3D3E3;
+  height: 475px;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
-  width: 25%; }
+  align-items: center; }
+
+.card:hover {
+  cursor: pointer;
+  background-color: #74A6D2; }
 
 .picture {
   height: 200px;

@@ -4,7 +4,8 @@ import RootReducers from '../../Reducers/RootReducers';
 import { connect } from 'react-redux';
 import { fetchDogSuccess, fetchDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
-import helpers from '../../Helpers/helpers'
+import helpers from '../../Helpers/helpers';
+import css from './Home.css';
 
 
 class Home extends Component {
@@ -27,8 +28,7 @@ class Home extends Component {
         />
       })
       return(
-        <div>
-          <h1>Home</h1>
+        <div className='card-container'>
           <div>{dogCards}</div>
         </div>
         )
