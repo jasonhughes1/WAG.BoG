@@ -15,9 +15,7 @@ class Home extends Component {
         <div>wait</div>
         )
     } else {
-      console.log(this.props.dogs[0]);
       const dogCards = this.props.dogs[0].map((dog, index) => {
-        console.log(dog.photo);
         return <Card
            name={dog.name}
           breed={dog.breed}
@@ -29,7 +27,7 @@ class Home extends Component {
       })
       return(
         <div className='card-container'>
-          <div>{dogCards}</div>
+          <div className='dog-cards'>{dogCards}</div>
         </div>
         )
 

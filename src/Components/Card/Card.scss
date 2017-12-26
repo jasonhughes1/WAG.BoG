@@ -3,16 +3,19 @@
   margin: 5px;
   background: #B3D3E3;
   height: 475px;
-  width: auto;
+  width: 275px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
+  box-shadow: 2px 4px 4px 2px;
 }
 
 .card:hover {
   cursor: pointer;
   background-color: #74A6D2;
+  border: 1px solid red;
 }
 
 .picture {

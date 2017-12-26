@@ -1,5 +1,8 @@
-.card-container {
+.dog-cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  margin: auto; }
+
+.card-container {
+  margin-top: 100px; }
