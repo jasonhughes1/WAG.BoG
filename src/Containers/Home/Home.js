@@ -4,7 +4,8 @@ import RootReducers from '../../Reducers/RootReducers';
 import { connect } from 'react-redux';
 import { fetchDogSuccess, fetchDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
-import helpers from '../../Helpers/helpers'
+import helpers from '../../Helpers/helpers';
+import css from './Home.css';
 
 
 class Home extends Component {
@@ -14,9 +15,7 @@ class Home extends Component {
         <div>wait</div>
         )
     } else {
-      console.log(this.props.dogs[0]);
       const dogCards = this.props.dogs[0].map((dog, index) => {
-        console.log(dog.photo);
         return <Card
            name={dog.name}
           breed={dog.breed}
@@ -27,9 +26,8 @@ class Home extends Component {
         />
       })
       return(
-        <div>
-          <h1>Home</h1>
-          <div>{dogCards}</div>
+        <div className='card-container'>
+          <div className='dog-cards'>{dogCards}</div>
         </div>
         )
 
