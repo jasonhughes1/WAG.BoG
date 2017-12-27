@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route } from 'react-router-dom';
 import './index.css';
 import App from './Components/App/App';
 import registerServiceWorker from './registerServiceWorker';
@@ -25,7 +26,7 @@ export const store = createStore(
 );
 
 
-render(
+ReactDOM.render(
   <BrowserRouter>
    <Provider store={ store } >
     <App />
