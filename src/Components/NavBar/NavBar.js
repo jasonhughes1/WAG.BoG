@@ -2,7 +2,7 @@ import React,  { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 import { connect } from 'react-redux';
-import { fetchDogs, postLocation } from '../../Actions/Actions'
+import { fetchDogs, postLocation } from '../../Helpers/fetchHelper'
 
 
 class NavBar extends Component {
