@@ -1,5 +1,7 @@
-import { fetchLocationSuccess, fetchDogSuccess } from '../Actions/Actions'
-import helpers from '../Helpers/helpers'
+import { fetchLocationSuccess, fetchLocation, fetchDogSuccess } from '../Actions/Actions'
+import dataCleaner from './dataCleaner'
+
+
 
 export const postLocation = (dataObject) => {
   return dispatch => { fetch('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDOxCWI5v69dw3ljge9fiJHdsC8BGrMbvE', {
@@ -14,13 +16,19 @@ export const postLocation = (dataObject) => {
   }
 }
 
+const fetchDogs = async () => {
+  try {
+    const fetchRaw = await     fetch('https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=colorado&animal=dog&format=json');
 
-export const fetchDogs = () => {
-  return dispatch => {
-    fetch('https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=colorado&animal=dog&format=json')
-      .then(response => response.json())
-      .then(response => helpers(response))
-      .then(results => dispatch(fetchDogSuccess(results)))
-      .catch(error => alert('error from fetch dogs call'))
-  };
+    const dogObj = await fetchRaw.json();
+    const cleanData = dataCleaner(dogObj);
+
+    return cleanData;
+
+
+  } catch (type) {
+    return Error('Fetch Failed!')
+  }
 };
+
+export default fetchDogs
