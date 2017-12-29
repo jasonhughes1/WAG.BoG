@@ -4,7 +4,6 @@ import RootReducers from '../../Reducers/RootReducers';
 import { connect } from 'react-redux';
 import { fetchDogSuccess, fetchDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
-import helpers from '../../Helpers/helpers';
 import css from './Home.css';
 
 
