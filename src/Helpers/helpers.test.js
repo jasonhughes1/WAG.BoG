@@ -1,10 +1,10 @@
-import helpers from './helpers';
+import dataCleaner from './dataCleaner';
 import mockData from './mock-data.json';
 
 describe('Helper Tests', () => {
 var cleaner
 beforeEach(() => {
-  cleaner = helpers(mockData)
+  cleaner = dataCleaner(mockData)
 })
 
 it('Should return an array of objects', () => {
@@ -28,11 +28,7 @@ it('should return an object with a sex key',() => {
   })
 
 it('should return an object with a photo key',() => {
-  const expectation = 'http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=60&-pnt.jpg'
+  const expectation =                "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=300&-pn.jpg"
   expect(cleaner[0].photo).toEqual(expectation)
   })
 })
-
-// it('should return an object with a photo key', () => {
-//   const expectation = { photoLarge: , photoSmall:}
-//   })
