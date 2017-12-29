@@ -1,8 +1,4 @@
-
-import { getPosition } from 'redux-effects-geolocation';
-import { store } from '../index.js';
 import fetchDogs from '../Helpers/fetchHelper'
-
 
 
 export const fetchLocationSuccess = location => {
