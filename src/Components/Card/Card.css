@@ -1,6 +1,6 @@
 .card {
   border: 1px solid black;
-  margin: 5px;
+  margin: 20px;
   background: #B3D3E3;
   height: 475px;
   width: 275px;
@@ -18,4 +18,5 @@
 
 .picture {
   height: 200px;
-  width: 200px; }
+  width: 200px;
+  border: 10px solid black; }
