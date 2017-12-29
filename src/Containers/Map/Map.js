@@ -5,17 +5,10 @@ import GoogleMapReact from 'google-map-react'
 import { connect } from 'react-redux';
 
 
-const showMap = ({ text }) => <div>{ text }</div>;
-
-
 class Map extends Component {
-  static defaultProps = {
-    center: { lat: 40.7446790, lng: -73.9485420 },
-    zoom: 10
-  }
-
 
   render() {
+    console.log(this.props)
     if(!this.props.location.length) {
       return(
         <div>wait</div>
@@ -25,13 +18,8 @@ class Map extends Component {
     return (
       <div className='google-map'>
         <GoogleMapReact
-          defaultCenter={ this.props.center }
-          defaultZoom={ this.props.zoom }>
-          <showMap
-            lat={ this.props.location[0].lat }
-            lng={ this.props.location[0].lng }
-            text={ 'Where Waldo?' }
-          />
+          defaultCenter={ {lat: this.props.location[0].lat, lng: this.props.location[0].lng} }
+          defaultZoom={ 10 }>
         </GoogleMapReact>
       </div>
       )
