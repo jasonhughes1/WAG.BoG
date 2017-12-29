@@ -1,7 +1,6 @@
 import fetchDogs from '../Helpers/fetchHelper'
 
 
-
 export const fetchLocationSuccess = location => {
   return {
     type: 'LOCATION_SUCCESS',
