@@ -1,6 +1,7 @@
 
 import { getPosition } from 'redux-effects-geolocation';
 import { store } from '../index.js';
+import fetchDogs from '../Helpers/fetchHelper'
 
 
 
@@ -9,6 +10,11 @@ export const fetchLocationSuccess = location => {
     type: 'LOCATION_SUCCESS',
     location
   };
+};
+
+export const getDogs = () => async dispatch => {
+  const newDogs = await fetchDogs();
+  dispatch(fetchDogSuccess(newDogs));
 };
 
 export const fetchDogSuccess = dogs => {
