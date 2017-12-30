@@ -1,16 +1,19 @@
-import App from './App';
 import React from 'react';
 import { shallow } from 'enzyme';
+import App from './App';
 
 describe('App tests', () => {
-  it('Should match the snapshot', () => {
-    const renderedApp = shallow(<App />);
+  let app;
 
-    expect(renderedApp).toMatchSnapshot();
+  beforeEach( () => {
+    app = shallow(<App />);
+  });
+
+  it('should be defined', () => {
+    expect(app).toBeDefined();
+  });
+
+  it('should match the snapshot', () => {
+    expect(app).toMatchSnapshot();
   });
 });
-//
-//   it('should match snapshot', () => {
-//     expect(renderedApp).toMatchSnapshot();
-//   })
-// })

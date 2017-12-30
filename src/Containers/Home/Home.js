@@ -7,7 +7,7 @@ import Card from '../../Components/Card/Card';
 import css from './Home.css';
 
 
-class Home extends Component {
+export class Home extends Component {
   render() {
     if(!this.props.dogs.length) {
       return(
@@ -34,7 +34,7 @@ class Home extends Component {
     }
   }
 
-const mapStateToProps = (store) => {
+export const mapStateToProps = (store) => {
   return {
     dogs: store.dogs
   }

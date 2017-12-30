@@ -5,16 +5,14 @@ import GoogleMapReact from 'google-map-react'
 import { connect } from 'react-redux';
 
 
-class Map extends Component {
+export class Map extends Component {
 
   render() {
-    console.log(this.props)
     if(!this.props.location.length) {
       return(
         <div>wait</div>
       )
     } else {
-      console.log(this.props.location[0].lng);
     return (
       <div className='google-map'>
         <GoogleMapReact
@@ -27,7 +25,7 @@ class Map extends Component {
   }
 }
 
-const mapStateToProps = (store) => {
+export const mapStateToProps = (store) => {
   return {
     location: store.location
   }
