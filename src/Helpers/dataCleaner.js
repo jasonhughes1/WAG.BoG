@@ -6,9 +6,9 @@ const dataCleaner = (data) => {
       breed: dog.breeds.breed.$t,
       sex: dog.sex.$t,
       photo: dog.media.photos.photo[3].$t,
-      street: dog.contact.address1,
-      city: dog.contact.city,
-      state: dog.contact.state
+      street: dog.contact.address1.$t,
+      city: dog.contact.city.$t,
+      state: dog.contact.state.$t
     })
   }))
   return completePets;
