@@ -5,7 +5,10 @@ const dataCleaner = (data) => {
       name: dog.name.$t,
       breed: dog.breeds.breed.$t,
       sex: dog.sex.$t,
-      photo: dog.media.photos.photo[3].$t
+      photo: dog.media.photos.photo[3].$t,
+      street: dog.contact.address1,
+      city: dog.contact.city,
+      state: dog.contact.state
     })
   }))
   return completePets;
