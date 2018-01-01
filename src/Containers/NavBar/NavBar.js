@@ -7,7 +7,7 @@ import fetchDogs from '../../Helpers/fetchHelper'
 import { getDogs } from '../../Actions/Actions'
 
 
-class NavBar extends Component {
+export class NavBar extends Component {
 
 
   componentDidMount() {
@@ -27,14 +27,14 @@ class NavBar extends Component {
   }
 }
 
-const mapStateToProps = (store) => {
+export const mapStateToProps = (store) => {
   return {
   dogs: store.dogs,
   location: store.location
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     getAllDogs: (newDogs) => {
       dispatch(getDogs(newDogs))
