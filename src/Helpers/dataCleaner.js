@@ -15,5 +15,4 @@ const dataCleaner = (data) => {
   return completePets;
 }
 
-
 export default dataCleaner;

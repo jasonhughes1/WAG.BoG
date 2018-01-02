@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import RootReducers from '../../Reducers/RootReducers';
 import { connect } from 'react-redux';
-import { fetchDogSuccess, fetchDogs} from '../../Actions/Actions';
+import { fetchDogSuccess, fetchDogs, searchCurrentDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
 import css from './Search.css';
-import searchDogs from '../../Helpers/fetchHelper';
+// import searchDogs from '../../Helpers/fetchHelper';
+
 
 
 export class Search extends Component {
@@ -25,9 +26,13 @@ export class Search extends Component {
 
   render() {
     const { searchValue, location } = this.state;
-    if(!this.props.searchForDogs.length) {
+    console.log(this.props.searchForDogs.length[0]);
+    if(!this.props.searchForDogs.length[0]) {
       return(
-        <div>Search for your dog here!!</div>
+        <div>Search for your dog here!!
+        <input className='search' placeholder='Please search by zip code or city and state' onChange={(event) => this.handleChange(event)} />
+        <button className='button' onClick={ () => this.props.searchCurrentDogs(searchValue, location) }>Search!</button>
+      </div>
         )
     } else {
       const dogCards = this.props.searchForDogs.map((dog, index) => {
@@ -44,8 +49,6 @@ export class Search extends Component {
       return(
         <div className='card-container'>
           <h1>Search</h1>
-          <input className='search' placeholder='Please search by zip code or city and state' onChange={(event) => this.handleChange(event)} />
-          <button className='button'>Search!</button>
           <div className='dog-cards'>{dogCards}</div>
         </div>
         )
@@ -62,9 +65,9 @@ export const mapStateToProps = (store) => {
 }
 
 export const mapDispatchToProps = (dispatch) => {
-  searchAll: (searchDogs, location) => {
-    dispatch(searchDogs(searchDogs, location))
+  searchCurrentDogs: (searchValue, location) => {
+    dispatch(searchCurrentDogs(searchValue, location))
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

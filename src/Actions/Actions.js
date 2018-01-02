@@ -20,7 +20,7 @@ export const fetchDogSuccess = dogs => {
   };
 };
 
-export const searchForDogs = () => async dispatch => {
+export const searchCurrentDogs = () => async dispatch => {
   const newDogs = await searchDogs();
   dispatch(searchDogSuccess(newDogs));
 };
