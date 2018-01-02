@@ -1,4 +1,4 @@
-import fetchDogs from '../Helpers/fetchHelper'
+import { fetchDogs } from '../Helpers/fetchHelper'
 
 
 export const fetchLocationSuccess = location => {
@@ -19,3 +19,7 @@ export const fetchDogSuccess = dogs => {
     dogs
   };
 };
+
+export const searchDogs = () => async dispatch => {
+  
+}

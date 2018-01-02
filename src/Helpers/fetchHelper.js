@@ -16,9 +16,9 @@ export const postLocation = (dataObject) => {
   }
 }
 
-const fetchDogs = async () => {
+export const fetchDogs = async () => {
   try {
-    const fetchRaw = await     fetch('https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=colorado&animal=dog&format=json');
+    const fetchRaw = await     fetch('https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=80112&animal=dog&format=json');
 
     const dogObj = await fetchRaw.json();
     const cleanData = dataCleaner(dogObj);
@@ -31,4 +31,18 @@ const fetchDogs = async () => {
   }
 };
 
-export default fetchDogs
+
+export const searchDogs = async (location) => {
+  try {
+    const fetchRaw = await     fetch(`https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=${location}&animal=dog&format=json`);
+
+    const dogObj = await fetchRaw.json();
+    const cleanData = dataCleaner(dogObj);
+
+    return cleanData;
+
+
+  } catch (type) {
+    return Error('Fetch Failed!')
+  }
+};
