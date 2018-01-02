@@ -28,6 +28,7 @@ export class Search extends Component {
       return(
         <div className='card-container'>
           <h1>Search</h1>
+          <input className='search' placeholder='Please search by zip code or city and state' />
           <div className='dog-cards'>{dogCards}</div>
         </div>
         )
@@ -38,7 +39,8 @@ export class Search extends Component {
 
 export const mapStateToProps = (store) => {
   return {
-    dogs: store.dogs
+    dogs: store.dogs,
+    searchForDogs: store.searchForDogs
   }
 }
 
