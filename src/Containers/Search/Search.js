@@ -5,17 +5,26 @@ import { connect } from 'react-redux';
 import { fetchDogSuccess, fetchDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
 import css from './Search.css';
+import searchDogs from '../../Helpers/fetchHelper';
 
 
 export class Search extends Component {
   constructor() {
     super()
       this.state = {
-        location: ''
+        searchValue: '',
+        location: '12563'
       }
     }
 
+    handleChange(event) {
+      this.setState({
+        searchValue: event.target.value
+      })
+    }
+
   render() {
+    const { searchValue, location } = this.state;
     if(!this.props.searchForDogs.length) {
       return(
         <div>Search for your dog here!!</div>
@@ -35,7 +44,7 @@ export class Search extends Component {
       return(
         <div className='card-container'>
           <h1>Search</h1>
-          <input className='search' placeholder='Please search by zip code or city and state' />
+          <input className='search' placeholder='Please search by zip code or city and state' onChange={(event) => this.handleChange(event)} />
           <button className='button'>Search!</button>
           <div className='dog-cards'>{dogCards}</div>
         </div>
@@ -52,4 +61,10 @@ export const mapStateToProps = (store) => {
   }
 }
 
-export default connect(mapStateToProps, null)(Search);
+export const mapDispatchToProps = (dispatch) => {
+  searchAll: (searchDogs, location) => {
+    dispatch(searchDogs(searchDogs, location))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
