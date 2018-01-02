@@ -14,7 +14,7 @@ export class Search extends Component {
         location: ''
       }
     }
-    
+
   render() {
     if(!this.props.searchForDogs.length) {
       return(
@@ -40,7 +40,6 @@ export class Search extends Component {
           <div className='dog-cards'>{dogCards}</div>
         </div>
         )
-
       }
     }
   }

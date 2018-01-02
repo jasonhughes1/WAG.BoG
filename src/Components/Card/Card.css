@@ -26,6 +26,9 @@
   background-color: #74A6D2;
   border: 1px solid red; }
 
+.zip {
+  margin-top: -15px; }
+
 .picture {
   height: 200px;
   width: 200px;
