@@ -1,5 +1,6 @@
 
 const dataCleaner = (data) => {
+  console.log(data);
   const completePets = data.petfinder.pets.pet.map((dog => {
     return Object.assign({}, {
       name: dog.name.$t,
