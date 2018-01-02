@@ -15,7 +15,6 @@ export class Home extends Component {
         )
     } else {
       const dogCards = this.props.dogs[0].map((dog, index) => {
-        console.log(dog);
         return <Card
            name={dog.name}
           breed={dog.breed}
@@ -24,6 +23,7 @@ export class Home extends Component {
          street={dog.street}
            city={dog.city}
           state={dog.state}
+            zip={dog.zip}
         />
       })
       return(

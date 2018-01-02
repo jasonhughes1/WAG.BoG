@@ -12,6 +12,7 @@ const Card = (props) => {
        <p className='street'>{props.street}</p>
        <p className='city'>{props.city}</p>
        <p className='state'>{props.state}</p>
+       <p className='zip'>{props.zip}</p>
   </div>
   )
 }
