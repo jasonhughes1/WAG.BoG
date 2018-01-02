@@ -20,18 +20,18 @@ export class Search extends Component {
 
     handleChange(event) {
       this.setState({
-        searchValue: event.target.value
+        location: event.target.value
       })
     }
 
   render() {
     const { searchValue, location } = this.state;
-    console.log(this.props.searchForDogs.length[0]);
+    console.log(location);
     if(!this.props.searchForDogs.length[0]) {
       return(
         <div>Search for your dog here!!
         <input className='search' placeholder='Please search by zip code or city and state' onChange={(event) => this.handleChange(event)} />
-        <button className='button' onClick={ () => this.props.searchCurrentDogs(searchValue, location) }>Search!</button>
+        <button className='button' onClick={ () => {console.log(location); this.props.searchCurrentDogs(location) }}>Search!</button>
       </div>
         )
     } else {
@@ -64,10 +64,10 @@ export const mapStateToProps = (store) => {
   }
 }
 
-export const mapDispatchToProps = (dispatch) => {
-  searchCurrentDogs: (searchValue, location) => {
-    dispatch(searchCurrentDogs(searchValue, location))
+export const mapDispatchToProps = (dispatch) => ({
+  searchCurrentDogs: (location) => {
+    dispatch(searchCurrentDogs(location))
   }
-};
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

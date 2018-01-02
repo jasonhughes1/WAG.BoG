@@ -12,7 +12,7 @@ export class NavBar extends Component {
   componentDidMount() {
     this.props.getAllDogs();
     this.props.getCurrentLocation();
-    this.props.getSearchDogs();
+    // this.props.getSearchDogs();
   }
 
   render() {
