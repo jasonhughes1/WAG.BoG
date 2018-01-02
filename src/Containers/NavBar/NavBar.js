@@ -2,9 +2,8 @@ import React,  { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 import { connect } from 'react-redux';
-import { postLocation } from '../../Helpers/fetchHelper'
-import fetchDogs from '../../Helpers/fetchHelper'
-import { getDogs } from '../../Actions/Actions'
+import { postLocation, fetchDogs } from '../../Helpers/fetchHelper'
+import { getDogs, searchForDogs } from '../../Actions/Actions'
 
 
 export class NavBar extends Component {
@@ -13,6 +12,7 @@ export class NavBar extends Component {
   componentDidMount() {
     this.props.getAllDogs();
     this.props.getCurrentLocation();
+    this.props.getSearchDogs();
   }
 
   render() {
@@ -41,7 +41,10 @@ export const mapDispatchToProps = (dispatch) => {
     },
     getCurrentLocation: (currLocation) => {
       dispatch(postLocation(currLocation))
-      }
+    },
+    getSearchDogs: (newDogs) => {
+      dispatch(searchForDogs(newDogs))
+    }
     }
   }
 

@@ -29,6 +29,7 @@ export class Search extends Component {
         <div className='card-container'>
           <h1>Search</h1>
           <input className='search' placeholder='Please search by zip code or city and state' />
+          <button className='button'>Search!</button>
           <div className='dog-cards'>{dogCards}</div>
         </div>
         )
