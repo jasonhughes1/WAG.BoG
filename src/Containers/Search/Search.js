@@ -26,12 +26,12 @@ export class Search extends Component {
 
   render() {
     const { searchValue, location } = this.state;
-    console.log(location);
+
     if(!this.props.searchForDogs.length[0]) {
       return(
         <div>Search for your dog here!!
         <input className='search' placeholder='Please search by zip code or city and state' onChange={(event) => this.handleChange(event)} />
-        <button className='button' onClick={ () => {console.log(location); this.props.searchCurrentDogs(location) }}>Search!</button>
+        <button className='button' onClick={ () =>  this.props.searchCurrentDogs(location) }>Search!</button>
       </div>
         )
     } else {
