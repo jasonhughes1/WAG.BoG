@@ -8,13 +8,20 @@ import css from './Search.css';
 
 
 export class Search extends Component {
+  constructor() {
+    super()
+      this.state = {
+        location: ''
+      }
+    }
+    
   render() {
-    if(!this.props.dogs.length) {
+    if(!this.props.searchForDogs.length) {
       return(
-        <div>wait</div>
+        <div>Search for your dog here!!</div>
         )
     } else {
-      const dogCards = this.props.dogs[0].map((dog, index) => {
+      const dogCards = this.props.searchForDogs.map((dog, index) => {
         return <Card
            name={dog.name}
           breed={dog.breed}
@@ -37,6 +44,7 @@ export class Search extends Component {
       }
     }
   }
+
 
 export const mapStateToProps = (store) => {
   return {
