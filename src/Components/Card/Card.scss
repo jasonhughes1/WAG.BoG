@@ -2,7 +2,7 @@
   border: 1px solid black;
   margin: 20px;
   background: #B3D3E3;
-  height: 475px;
+  height: 430px;
   width: 275px;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,20 @@
   align-items: center;
   border-radius: 25px;
   box-shadow: 2px 4px 4px 2px;
+}
+
+
+.street {
+  margin: -20px;
+}
+
+.state {
+  margin: -20px;
+  padding-bottom: 30px;
+}
+
+.sex {
+  margin-top: -15px;
 }
 
 .card:hover {

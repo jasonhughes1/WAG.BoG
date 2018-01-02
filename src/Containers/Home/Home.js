@@ -15,13 +15,15 @@ export class Home extends Component {
         )
     } else {
       const dogCards = this.props.dogs[0].map((dog, index) => {
+        console.log(dog);
         return <Card
            name={dog.name}
           breed={dog.breed}
             sex={dog.sex}
         picture={dog.photo}
-
-
+         street={dog.street}
+           city={dog.city}
+          state={dog.state}
         />
       })
       return(
