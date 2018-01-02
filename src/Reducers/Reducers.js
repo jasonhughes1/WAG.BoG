@@ -7,6 +7,15 @@ export const dogs = (state = [], action) => {
   }
 };
 
+export const searchForDogs = (state = [], action) => {
+  switch (action.type) {
+  case 'SEARCH_DOG_SUCCESS':
+    return [...state, action.searchDogs];
+  default:
+    return state;
+  }
+};
+
 export const location = (state = [], action) => {
   switch (action.type) {
     case 'LOCATION_SUCCESS':
