@@ -34,11 +34,11 @@ export const fetchDogs = async () => {
 
 export const searchDogs = async (location) => {
   try {
-    const fetchRaw = await     fetch(`https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=${location}&animal=dog&format=json`);
+    const fetchRaw = await     fetch('https://galvanize-cors-proxy.herokuapp.com/http://api.petfinder.com/pet.find?key=ff2ba3ff151ed0332df60d1672e67959&location=' + location + '&animal=dog&format=json');
 
     const dogObj = await fetchRaw.json();
     const cleanData = dataCleaner(dogObj);
-
+    console.log(cleanData);
     return cleanData;
 
 
