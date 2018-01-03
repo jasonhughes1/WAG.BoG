@@ -2,6 +2,7 @@
   "name": "wag.bog",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://api.petfinder.com/",
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
     "google-map-react": "^0.26.0",
