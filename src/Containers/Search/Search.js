@@ -24,37 +24,36 @@ export class Search extends Component {
       })
     }
 
-  render() {
-    const { searchValue, location } = this.state;
 
-    if(!this.props.searchForDogs.length[0]) {
+  render() {
+    const dogCards = this.props.searchForDogs.map((dog, index) => {
+      console.log(dog);
+      return <Card
+        name={dog.name}
+        breed={dog.breed}
+        sex={dog.sex}
+        picture={dog.photo}
+        street={dog.street}
+        city={dog.city}
+        state={dog.state}
+      />
+    })
+
+    const { searchValue, location } = this.state;
       return(
         <div>Search for your dog here!!
         <input className='search' placeholder='Please search by zip code or city and state' onChange={(event) => this.handleChange(event)} />
         <button className='button' onClick={ () =>  this.props.searchCurrentDogs(location) }>Search!</button>
-      </div>
-        )
-    } else {
-      const dogCards = this.props.searchForDogs.map((dog, index) => {
-        return <Card
-           name={dog.name}
-          breed={dog.breed}
-            sex={dog.sex}
-        picture={dog.photo}
-         street={dog.street}
-           city={dog.city}
-          state={dog.state}
-        />
-      })
-      return(
         <div className='card-container'>
           <h1>Search</h1>
           <div className='dog-cards'>{dogCards}</div>
         </div>
-        )
+      </div>
+          )
+        }
       }
-    }
-  }
+
+
 
 
 export const mapStateToProps = (store) => {
