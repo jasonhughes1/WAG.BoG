@@ -10,6 +10,7 @@ export const fetchLocationSuccess = location => {
 
 export const getDogs = () => async dispatch => {
   const newDogs = await fetchDogs();
+  console.log('NEWDOGS', newDogs);
   dispatch(fetchDogSuccess(newDogs));
 };
 

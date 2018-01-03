@@ -1,15 +1,33 @@
+
 .search {
   width: 200px;
 }
 
-// .card-container {
-//   width: 100vw;
-//   height: 100vh;
-// }
-//
-// .dog-cards {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   margin: auto;
-// }
+.button {
+  margin-top: 10px;
+}
+
+
+.header-container {
+  background-image: url('../../Images/caleb-fisher-7320.jpg');
+  background-size: cover;
+  // filter: brightness(30%);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whos {
+
+}
+
+.search-for {
+  margin-top: 250px;
+}
+
+.dog-cards {
+  // background-color: #5C3A2B;
+  background-image: url('../../Images/jonathan-forage-367660.jpg');
+  background-size: cover;
+}

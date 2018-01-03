@@ -25,7 +25,6 @@ export const fetchDogs = async () => {
 
     return cleanData;
 
-
   } catch (type) {
     return Error('Fetch Failed!')
   }
@@ -38,6 +37,7 @@ export const searchDogs = async (location) => {
 
     const dogObj = await fetchRaw.json();
     const cleanData = dataCleaner(dogObj);
+    console.log(cleanData);
     return cleanData;
 
 

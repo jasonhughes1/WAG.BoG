@@ -1,7 +1,7 @@
 .card {
   border: 1px solid black;
   margin: 20px;
-  background: #B3D3E3;
+  background: lightgrey;
   height: 430px;
   width: 275px;
   display: flex;
@@ -28,8 +28,8 @@
 
 .card:hover {
   cursor: pointer;
-  background-color: #74A6D2;
-  border: 1px solid red;
+  background-color: white;
+  border: 1px solid white;
 }
 
 .zip {
