@@ -3,3 +3,8 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto; }
+
+.image {
+  height: 500px;
+  background-size: cover;
+  background-image: url("../../Images/ken-reid-290760_Fotor.jpg"); }

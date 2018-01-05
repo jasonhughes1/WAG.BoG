@@ -28,6 +28,7 @@ export class Home extends Component {
       })
       return(
         <div className='card-container'>
+          <div className='image'></div>
           <div className='dog-cards'>{dogCards}</div>
         </div>
         )
