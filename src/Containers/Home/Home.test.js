@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { Home, mapStateToProps, mapDispatchToProps } from './Home';
+import { shallow } from 'enzyme';
+import { Home } from './Home';
 
 describe('Home tests', () => {
   let home;
@@ -14,14 +14,14 @@ describe('Home tests', () => {
         location={{key: 'value'}}
         match={{key: 'value'}}
       />);
-    });
-
-
-    it.skip('should match the snapshot', () => {
-      expect(home).toMatchSnapshot();
-      });
-
-    it.skip('Should be defined', () => {
-      expect(home).toBeDefined();
-    })
   });
+
+
+  it.skip('should match the snapshot', () => {
+    expect(home).toMatchSnapshot();
+  });
+
+  it.skip('Should be defined', () => {
+    expect(home).toBeDefined();
+  });
+});

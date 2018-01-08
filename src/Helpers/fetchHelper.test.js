@@ -1,5 +1,5 @@
-import fetchHelper from './fetchHelper';
-import mockData from './mockData';
+// import fetchHelper from './fetchHelper';
+// import mockData from './mockData';
 
 
 // describe('dog API call', () => {
