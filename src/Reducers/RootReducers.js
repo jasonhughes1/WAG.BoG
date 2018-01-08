@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
-import { dogs, location, searchForDogs } from './Reducers';
+import { dogs, location, searchForDogs, favorites } from './Reducers';
 
 
 
 const rootReducer = combineReducers({
   dogs,
   location,
-  searchForDogs
+  searchForDogs,
+  favorites
 })
 
 

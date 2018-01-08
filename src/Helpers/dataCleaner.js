@@ -1,6 +1,6 @@
 
 const dataCleaner = (data) => {
-  const completePets = data.petfinder.pets.pet.map((dog => {
+  const completePets = data.petfinder.pets.pet.map(dog => {
     return Object.assign({}, {
       name: dog.name.$t,
       breed: dog.breeds.breed.$t,
@@ -11,7 +11,7 @@ const dataCleaner = (data) => {
       state: dog.contact.state.$t,
       zip: dog.contact.zip.$t
     })
-  }))
+  })
   return completePets;
 }
 

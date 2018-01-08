@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 import { fetchDogSuccess, fetchDogs, searchCurrentDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
 import css from './Search.css';
-// import searchDogs from '../../Helpers/fetchHelper';
-
 
 
 export class Search extends Component {
@@ -27,8 +25,8 @@ export class Search extends Component {
 
   render() {
     const dogCards = this.props.searchForDogs.map((dog, index) => {
-      console.log(dog);
       return <Card
+         key={index}
         name={dog.name}
         breed={dog.breed}
         sex={dog.sex}
