@@ -1,4 +1,4 @@
-import { fetchDogs, searchDogs } from '../Helpers/fetchHelper'
+import { fetchDogs, searchDogs } from '../Helpers/fetchHelper';
 
 
 export const fetchLocationSuccess = location => {
@@ -33,12 +33,11 @@ export const searchDogSuccess = searchDogs => {
 
 
 export const addFavorites = favorites => {
-  console.log(favorites);
   return {
     type: 'ADD_FAVORITES',
     favorites
-  }
-}
+  };
+};
 
 export const removeFavorites = () => {
   return {

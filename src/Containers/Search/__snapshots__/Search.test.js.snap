@@ -51,7 +51,7 @@ ShallowWrapper {
           <h1
                     className="whos"
           >
-                    Who's a good boy, or girl?
+                    Whos a good boy, or girl?
           </h1>
           <h2
                     className="search-for"
@@ -100,7 +100,7 @@ ShallowWrapper {
             <h1
               className="whos"
 >
-              Who's a good boy, or girl?
+              Whos a good boy, or girl?
 </h1>,
             <h2
               className="search-for"
@@ -128,11 +128,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Who's a good boy, or girl?",
+              "children": "Whos a good boy, or girl?",
               "className": "whos",
             },
             "ref": null,
-            "rendered": "Who's a good boy, or girl?",
+            "rendered": "Whos a good boy, or girl?",
             "type": "h1",
           },
           Object {
@@ -255,7 +255,7 @@ ShallowWrapper {
             <h1
                         className="whos"
             >
-                        Who's a good boy, or girl?
+                        Whos a good boy, or girl?
             </h1>
             <h2
                         className="search-for"
@@ -304,7 +304,7 @@ ShallowWrapper {
               <h1
                 className="whos"
 >
-                Who's a good boy, or girl?
+                Whos a good boy, or girl?
 </h1>,
               <h2
                 className="search-for"
@@ -332,11 +332,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Who's a good boy, or girl?",
+                "children": "Whos a good boy, or girl?",
                 "className": "whos",
               },
               "ref": null,
-              "rendered": "Who's a good boy, or girl?",
+              "rendered": "Whos a good boy, or girl?",
               "type": "h1",
             },
             Object {

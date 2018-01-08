@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
   location: locationReducer,
   searchForDogs,
   favorites
-})
+});
 
 
-export default rootReducer
+export default rootReducer;

@@ -1,19 +1,20 @@
-import { fetchLocationSuccess, fetchLocation, fetchDogSuccess } from '../Actions/Actions'
-import dataCleaner from './Data/dataCleaner'
+import { fetchLocationSuccess } from '../Actions/Actions';
+import dataCleaner from './Data/dataCleaner';
 
 
 export const postLocation = (dataObject) => {
-  return dispatch => { fetch('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDOxCWI5v69dw3ljge9fiJHdsC8BGrMbvE', {
-    method: 'POST',
-    body: JSON.stringify(dataObject),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }) .then(response => response.json())
-  .then(result => dispatch(fetchLocationSuccess(result.location)))
-  .catch(error => alert('error from location'))
-  }
-}
+  return dispatch => {
+    fetch('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDOxCWI5v69dw3ljge9fiJHdsC8BGrMbvE', {
+      method: 'POST',
+      body: JSON.stringify(dataObject),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }) .then(response => response.json())
+      .then(result => dispatch(fetchLocationSuccess(result.location)))
+      .catch(error => alert(error));
+  };
+};
 
 export const fetchDogs = async () => {
   try {
@@ -25,7 +26,7 @@ export const fetchDogs = async () => {
     return cleanData;
 
   } catch (type) {
-    return Error('Fetch Failed!')
+    return Error('Fetch Failed!');
   }
 };
 
@@ -39,6 +40,6 @@ export const searchDogs = async (location) => {
     return cleanData;
 
   } catch (type) {
-    return Error('Fetch Failed!')
+    return Error('Fetch Failed!');
   }
 };

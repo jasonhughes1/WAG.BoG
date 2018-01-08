@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { Map, mapStateToProps, mapDispatchToProps } from './Map';
+import { shallow } from 'enzyme';
+import { Map } from './Map';
 
 describe('Map tests', () => {
   let map;
@@ -13,13 +13,13 @@ describe('Map tests', () => {
         location={['denver']}
         match={{key: 'value'}}
       />);
-    });
-
-    it('should match the snapshot', () => {
-      expect(map).toMatchSnapshot();
-      });
-
-    it('Should be defined', () => {
-      expect(map).toBeDefined();
-    })
   });
+
+  it('should match the snapshot', () => {
+    expect(map).toMatchSnapshot();
+  });
+
+  it('Should be defined', () => {
+    expect(map).toBeDefined();
+  });
+});

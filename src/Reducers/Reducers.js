@@ -18,27 +18,27 @@ export const searchForDogs = (state = [], action) => {
 
 export const locationReducer = (state = [], action) => {
   switch (action.type) {
-    case 'LOCATION_SUCCESS':
-      return [...state, action.location];
-    default:
-      return state;
+  case 'LOCATION_SUCCESS':
+    return [...state, action.location];
+  default:
+    return state;
   }
-}
+};
 
 export const favorites = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_FAVORITES':
-      return [...state, action.favorites]
-    case 'REMOVE_FAVORITES':
-      // const updateFavs = state.map(item => {
-      //   if(item.name === action.name) {
-      //     return {...item, ...action.favorites}
-      //   }
-      //   return item;
-      // })
-      // return updateFavs;
-      return [];
-    default:
-      return state;
+  case 'ADD_FAVORITES':
+    return [...state, action.favorites];
+  case 'REMOVE_FAVORITES':
+    // const updateFavs = state.map(item => {
+    //   if(item.name === action.name) {
+    //     return {...item, ...action.favorites}
+    //   }
+    //   return item;
+    // })
+    // return updateFavs;
+    return [];
+  default:
+    return state;
   }
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { Search, mapStateToProps, mapDispatchToProps } from './Search';
+import { shallow } from 'enzyme';
+import { Search } from './Search';
 
 describe('Search tests', () => {
   let search;
@@ -15,14 +15,14 @@ describe('Search tests', () => {
         searchCurrentDogs= {mockFunc}
         searchForDogs= {['pups']}
       />);
-    });
-
-
-    it('should match the snapshot', () => {
-      expect(search).toMatchSnapshot();
-      });
-
-    it('Should be defined', () => {
-      expect(search).toBeDefined();
-    })
   });
+
+
+  it('should match the snapshot', () => {
+    expect(search).toMatchSnapshot();
+  });
+
+  it('Should be defined', () => {
+    expect(search).toBeDefined();
+  });
+});
