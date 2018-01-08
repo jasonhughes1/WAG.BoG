@@ -5,36 +5,42 @@ import { addFavorites, removeFavorites } from '../../Actions/Actions';
 import PropTypes from 'prop-types';
 
 
-export const Card = (props) => {
+class Card extends React.Component  {
+  constructor(props) {
+    super(props);
+    this.state = {active: false};
+  }
 
-  const filterFavs = (favIndex) => {
-    let results = props.favorites.filter(fav => fav.name === favIndex);
+  filterFavs = (favIndex) => {
+    let results = this.props.favorites.filter(fav => fav.name === favIndex);
     return results;
   };
 
-  const toggleFavorites = (dogCard) => {
-    if (!filterFavs(dogCard.name).length) {
-      return props.addFavorites(dogCard);
+  toggleFavorites = (dogCard) => {
+    this.setState({active: true});
+    if (!this.filterFavs(dogCard.name).length) {
+      return this.props.addFavorites(dogCard);
     } else {
-      return props.clearFavorites(dogCard);
+      this.setState({active: false});
+      return this.props.clearFavorites(dogCard);
     }
   };
-
-  return (
-    <div className='card'>
-      <button className='active inactive' onClick={() => toggleFavorites(props)}>Favorite</button>
-      <h2 className='name'> {props.name}</h2>
-      <img className ='picture' src={props.picture} />
-      <h3 className='breed'>Breed:  {props.breed}</h3>
-      <h4 className='sex'>Sex: {props.sex}</h4>
-      <p className='street'>{props.street}</p>
-      <p className='city'>{props.city}</p>
-      <p className='state'>{props.state}</p>
-      <p className='zip'>{props.zip}</p>
-    </div>
-  );
-};
-
+  render() {
+    return (
+      <div className='card'>
+        <span className={this.state.active === false ? 'favorite-button' : 'favorite-button active'} onClick={() => this.toggleFavorites(this.props)}>Favorite</span>
+        <h2 className='name'> {this.props.name}</h2>
+        <img className ='picture' src={this.props.picture} />
+        <h3 className='breed'>Breed:  {this.props.breed}</h3>
+        <h4 className='sex'>Sex: {this.props.sex}</h4>
+        <p className='street'>{this.props.street}</p>
+        <p className='city'>{this.props.city}</p>
+        <p className='state'>{this.props.state}</p>
+        <p className='zip'>{this.props.zip}</p>
+      </div>
+    );
+  }
+}
 export const mapStateToProps = (store) => {
   return {
     favorites: store.favorites
