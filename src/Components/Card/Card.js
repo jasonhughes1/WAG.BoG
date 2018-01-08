@@ -16,13 +16,12 @@ const toggleFavorites = (dogCard) => {
  return props.addFavorites(dogCard)
  } else {
  return props.clearFavorites(dogCard)
- }
+  }
 }
-
 
   return (
     <div className='card'>
-      <button onClick={() => toggleFavorites(props)}>Favorite</button>
+      <button className='active inactive' onClick={() => toggleFavorites(props)}>Favorite</button>
       <h2 className='name'> {props.name}</h2>
       <img className ='picture' src={props.picture} />
       <h3 className='breed'>Breed:  {props.breed}</h3>

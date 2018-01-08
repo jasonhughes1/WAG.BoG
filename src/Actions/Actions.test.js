@@ -30,4 +30,33 @@ describe('Action Tests', () => {
     }
     expect(actions.fetchDogSuccess(dogs)).toEqual(expected)
   })
+
+  it('Should have a type of ADD_FAVORITES', () => {
+    const favorites = {
+      name: "Charms",
+      breed: "Labrador Retriever",
+      sex: "F",
+      photo: "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=300&-pn.jpg"
+    }
+
+    const expected = {
+      type: 'ADD_FAVORITES',
+      favorites
+    }
+    expect(actions.addFavorites(favorites)).toEqual(expected)
+  })
+
+  it('Should have a type of REMOVE_FAVORITES', () => {
+    const favorites = {
+      name: "Charms",
+      breed: "Labrador Retriever",
+      sex: "F",
+      photo: "http://photos.petfinder.com/photos/pets/39936980/1/?bust=1510898247&width=300&-pn.jpg"
+    }
+
+    const expected = {
+      type: 'REMOVE_FAVORITES',
+    }
+    expect(actions.removeFavorites()).toEqual(expected)
+  })
 })

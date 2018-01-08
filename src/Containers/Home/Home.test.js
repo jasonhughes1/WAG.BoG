@@ -17,11 +17,11 @@ describe('Home tests', () => {
     });
 
 
-    it('should match the snapshot', () => {
+    it.skip('should match the snapshot', () => {
       expect(home).toMatchSnapshot();
       });
 
-    it('Should be defined', () => {
+    it.skip('Should be defined', () => {
       expect(home).toBeDefined();
     })
   });

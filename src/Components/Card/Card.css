@@ -33,3 +33,9 @@
   height: 200px;
   width: 200px;
   border: 10px solid black; }
+
+.inactive {
+  cursor: pointer;
+  font-weight: bold;
+  color: red;
+  margin-top: 15px; }
