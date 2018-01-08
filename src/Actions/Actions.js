@@ -10,7 +10,6 @@ export const fetchLocationSuccess = location => {
 
 export const getDogs = () => async dispatch => {
   const newDogs = await fetchDogs();
-  console.log('NEWDOGS', newDogs);
   dispatch(fetchDogSuccess(newDogs));
 };
 
@@ -29,5 +28,20 @@ export const searchDogSuccess = searchDogs => {
   return {
     type: 'SEARCH_DOG_SUCCESS',
     searchDogs
+  };
+};
+
+
+export const addFavorites = favorites => {
+  console.log(favorites);
+  return {
+    type: 'ADD_FAVORITES',
+    favorites
+  }
+}
+
+export const removeFavorites = () => {
+  return {
+    type: 'REMOVE_FAVORITES'
   };
 };
