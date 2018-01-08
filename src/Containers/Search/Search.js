@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchDogSuccess, fetchDogs, searchCurrentDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
 import css from './Search.css';
-
+import PropTypes from 'prop-types';
 
 export class Search extends Component {
   constructor() {
@@ -26,7 +26,7 @@ export class Search extends Component {
   render() {
     const dogCards = this.props.searchForDogs.map((dog, index) => {
       return <Card
-         key={index}
+        key={index}
         name={dog.name}
         breed={dog.breed}
         sex={dog.sex}
@@ -56,7 +56,6 @@ export class Search extends Component {
 
 
 
-
 export const mapStateToProps = (store) => {
   return {
     dogs: store.dogs,
@@ -69,5 +68,7 @@ export const mapDispatchToProps = (dispatch) => ({
     dispatch(searchCurrentDogs(location))
   }
 });
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

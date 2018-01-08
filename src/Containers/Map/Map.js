@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 import { connect } from 'react-redux';
 
-
 export class Map extends Component {
 
   render() {
@@ -30,5 +29,7 @@ export const mapStateToProps = (store) => {
     location: store.location
   }
 }
+
+
 
 export default connect(mapStateToProps, null)(Map);

@@ -1,7 +1,8 @@
 import React from 'react';
 import css from './Card.css';
 import { connect } from 'react-redux';
-import { addFavorites, removeFavorites } from '../../Actions/Actions'
+import { addFavorites, removeFavorites } from '../../Actions/Actions';
+import PropTypes from 'prop-types';
 
 
 export const Card = (props) => {
@@ -48,5 +49,18 @@ export const mapDispatchToProps = dispatch => ({
     dispatch(removeFavorites(favorites));
   }
 });
+
+Card.propTypes = {
+addFavorites: PropTypes.func,
+breed: PropTypes.string,
+city: PropTypes.string,
+clearFavorites: PropTypes.func,
+favorites: PropTypes.array,
+name: PropTypes.string,
+picture: PropTypes.string,
+sex: PropTypes.string,
+state: PropTypes.string,
+zip: PropTypes.string
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
