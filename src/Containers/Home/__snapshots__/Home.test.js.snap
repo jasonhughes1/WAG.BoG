@@ -1,3 +1,217 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home tests should match the snapshot 1`] = `undefined`;
+exports[`Home tests should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    dispatch={[Function]}
+    dogs={
+        Array [
+            Array [
+              "pups",
+            ],
+          ]
+    }
+    history={
+        Object {
+            "key": "value",
+          }
+    }
+    location={
+        Object {
+            "key": "value",
+          }
+    }
+    match={
+        Object {
+            "key": "value",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="image"
+/>,
+        <div
+          className="dog-cards"
+>
+          <Connect(Card)
+                    breed={undefined}
+                    city={undefined}
+                    name={undefined}
+                    picture={undefined}
+                    sex={undefined}
+                    state={undefined}
+                    street={undefined}
+                    zip={undefined}
+          />
+</div>,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "image",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Connect(Card)
+              breed={undefined}
+              city={undefined}
+              name={undefined}
+              picture={undefined}
+              sex={undefined}
+              state={undefined}
+              street={undefined}
+              zip={undefined}
+/>,
+          ],
+          "className": "dog-cards",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "class",
+            "props": Object {
+              "breed": undefined,
+              "city": undefined,
+              "name": undefined,
+              "picture": undefined,
+              "sex": undefined,
+              "state": undefined,
+              "street": undefined,
+              "zip": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="image"
+/>,
+          <div
+            className="dog-cards"
+>
+            <Connect(Card)
+                        breed={undefined}
+                        city={undefined}
+                        name={undefined}
+                        picture={undefined}
+                        sex={undefined}
+                        state={undefined}
+                        street={undefined}
+                        zip={undefined}
+            />
+</div>,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "image",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Connect(Card)
+                breed={undefined}
+                city={undefined}
+                name={undefined}
+                picture={undefined}
+                sex={undefined}
+                state={undefined}
+                street={undefined}
+                zip={undefined}
+/>,
+            ],
+            "className": "dog-cards",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "class",
+              "props": Object {
+                "breed": undefined,
+                "city": undefined,
+                "name": undefined,
+                "picture": undefined,
+                "sex": undefined,
+                "state": undefined,
+                "street": undefined,
+                "zip": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

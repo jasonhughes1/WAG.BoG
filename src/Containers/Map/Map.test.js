@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Map } from './Map';
+import { Map, mapStateToProps } from './Map';
 
 describe('Map tests', () => {
   let map;
@@ -21,5 +21,15 @@ describe('Map tests', () => {
 
   it('Should be defined', () => {
     expect(map).toBeDefined();
+  });
+});
+
+describe('map state to props', () => {
+  it('should receive location from the store', () => {
+    const mockStore = {
+      location: []
+    };
+    const expected = mapStateToProps(mockStore);
+    expect(expected.location).toEqual(mockStore.location);
   });
 });

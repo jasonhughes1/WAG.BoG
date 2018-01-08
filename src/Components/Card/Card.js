@@ -5,7 +5,7 @@ import { addFavorites, removeFavorites } from '../../Actions/Actions';
 import PropTypes from 'prop-types';
 
 
-class Card extends React.Component  {
+export class Card extends React.Component  {
   constructor(props) {
     super(props);
     this.state = {active: false};

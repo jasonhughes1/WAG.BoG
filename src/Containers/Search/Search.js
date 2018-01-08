@@ -70,7 +70,6 @@ export const mapDispatchToProps = (dispatch) => ({
 Search.propTypes = {
   searchCurrentDogs: PropTypes.func,
   searchForDogs: PropTypes.array
-
 };
 
 
