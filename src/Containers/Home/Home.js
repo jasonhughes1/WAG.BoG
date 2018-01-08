@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchDogSuccess, fetchDogs} from '../../Actions/Actions';
 import Card from '../../Components/Card/Card';
 import css from './Home.css';
-
+import PropTypes from 'prop-types';
 
 export class Home extends Component {
   render() {
@@ -42,6 +42,14 @@ export const mapStateToProps = (store) => {
   return {
     dogs: store.dogs
   }
+}
+
+Home.propTypes = {
+  dispatch: PropTypes.func,
+  dogs: PropTypes.array,
+  history: PropTypes.object,
+  location: PropTypes.object,
+  match: PropTypes.object 
 }
 
 export default connect(mapStateToProps, null)(Home);

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { postLocation } from '../../Helpers/fetchHelper'
 import fetchDogs from '../../Helpers/fetchHelper'
 import { getDogs } from '../../Actions/Actions'
+import PropTypes from 'prop-types';
 
 
 class NavBar extends Component {
@@ -43,6 +44,16 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(postLocation(currLocation))
       }
     }
+  }
+
+  NavBar.propTypes = {
+    dogs: PropTypes.array,
+    getAllDogs: PropTypes.func,
+    getCurrentLocation: PropTypes.func,
+    getSearchDogs: PropTypes.func,
+    history: PropTypes.object,
+    location: PropTypes.array,
+    match: PropTypes.object
   }
 
 
