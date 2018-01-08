@@ -219,7 +219,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "0",
               "nodeType": "class",
               "props": Object {
                 "breed": undefined,
@@ -423,7 +423,7 @@ ShallowWrapper {
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "0",
                 "nodeType": "class",
                 "props": Object {
                   "breed": undefined,

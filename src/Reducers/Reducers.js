@@ -1,4 +1,4 @@
-export const dogs = (state = [], action) => {
+export const dogsReducer = (state = [], action) => {
   switch (action.type) {
   case 'DOG_SUCCESS':
     return [...state, action.dogs];
@@ -16,7 +16,7 @@ export const searchForDogs = (state = [], action) => {
   }
 };
 
-export const location = (state = [], action) => {
+export const locationReducer = (state = [], action) => {
   switch (action.type) {
     case 'LOCATION_SUCCESS':
       return [...state, action.location];
@@ -30,13 +30,14 @@ export const favorites = (state = [], action) => {
     case 'ADD_FAVORITES':
       return [...state, action.favorites]
     case 'REMOVE_FAVORITES':
-      const updateFavs = state.map(item => {
-        if(item.name === action.name) {
-          return [...item, action.favorites]
-        }
-        return item;
-      })
-      return updateFavs;
+      // const updateFavs = state.map(item => {
+      //   if(item.name === action.name) {
+      //     return {...item, ...action.favorites}
+      //   }
+      //   return item;
+      // })
+      // return updateFavs;
+      return [];
     default:
       return state;
   }

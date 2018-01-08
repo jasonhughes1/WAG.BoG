@@ -1,5 +1,5 @@
 import { fetchLocationSuccess, fetchLocation, fetchDogSuccess } from '../Actions/Actions'
-import dataCleaner from './dataCleaner'
+import dataCleaner from './Data/dataCleaner'
 
 
 export const postLocation = (dataObject) => {
