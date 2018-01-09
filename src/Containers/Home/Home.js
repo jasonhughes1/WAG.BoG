@@ -8,7 +8,9 @@ export class Home extends Component {
   render() {
     if (!this.props.dogs.length) {
       return (
-        <div>wait</div>
+        <div>
+          <img alt='golden retreiver gif' className='golden-gif' src={ require('../../Images/7LKQLPM.gif')}/>
+        </div>
       );
     } else {
       const dogCards = this.props.dogs[0].map((dog, index) => {
