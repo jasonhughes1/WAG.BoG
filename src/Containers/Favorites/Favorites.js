@@ -16,7 +16,7 @@ export class Favorites extends Component {
         name={dog.name}
         breed={dog.breed}
         sex={dog.sex}
-        picture={dog.photo}
+        picture={dog.picture}
         street={dog.street}
         city={dog.city}
         state={dog.state}
