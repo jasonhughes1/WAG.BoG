@@ -26,15 +26,11 @@ export const locationReducer = (state = [], action) => {
 };
 
 export const favorites = (state = [], action) => {
-  // let newState;
   switch (action.type) {
   case 'ADD_FAVORITES':
     return [...state, action.favorites];
   case 'REMOVE_FAVORITES':
-    console.log(action);
     return [...state.filter(item => item.name !== action.favorites.name)];
-    // return {newState};
-    // return [...newState];
   default:
     return state;
   }
