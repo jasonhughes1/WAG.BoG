@@ -11,6 +11,12 @@ export class Card extends React.Component  {
     this.state = {active: false};
   }
 
+  componentDidMount() {
+    if (this.props.favorites.filter(item => item.name === this.props.name).length) {
+      this.setState({active: true});
+    }
+  }
+
   filterFavs = (favIndex) => {
     let results = this.props.favorites.filter(fav => fav.name === favIndex);
     return results;

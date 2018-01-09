@@ -39,8 +39,9 @@ export const addFavorites = favorites => {
   };
 };
 
-export const removeFavorites = () => {
+export const removeFavorites = (favorites) => {
   return {
-    type: 'REMOVE_FAVORITES'
+    type: 'REMOVE_FAVORITES',
+    favorites
   };
 };

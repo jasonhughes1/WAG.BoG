@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '../../Components/Card/Card';
+import './Favorites.css';
 
 export class Favorites extends Component {
   constructor() {
@@ -8,6 +9,7 @@ export class Favorites extends Component {
   }
 
   render() {
+    console.log(this.props.favorites);
     const favCards = this.props.favorites.map((dog, index) => {
       return <Card
         key={index}
@@ -22,7 +24,6 @@ export class Favorites extends Component {
     });
     return (
       <div>
-        <h1>Favorites</h1>
         <div className='fav-cards'>{favCards}</div>
       </div>
     );
