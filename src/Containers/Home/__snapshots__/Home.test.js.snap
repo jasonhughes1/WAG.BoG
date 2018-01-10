@@ -42,8 +42,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div
-          className="image"
+        <img
+          className="home-image"
+          src="ken-reid-290760_Fotor.jpg"
 />,
         <div
           className="dog-cards"
@@ -69,11 +70,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "image",
+          "className": "home-image",
+          "src": "ken-reid-290760_Fotor.jpg",
         },
         "ref": null,
         "rendered": null,
-        "type": "div",
+        "type": "img",
       },
       Object {
         "instance": null,
@@ -127,8 +129,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div
-            className="image"
+          <img
+            className="home-image"
+            src="ken-reid-290760_Fotor.jpg"
 />,
           <div
             className="dog-cards"
@@ -154,11 +157,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "image",
+            "className": "home-image",
+            "src": "ken-reid-290760_Fotor.jpg",
           },
           "ref": null,
           "rendered": null,
-          "type": "div",
+          "type": "img",
         },
         Object {
           "instance": null,
