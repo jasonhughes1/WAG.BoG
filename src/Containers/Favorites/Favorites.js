@@ -23,7 +23,7 @@ export class Favorites extends Component {
       />;
     });
     return (
-      <div>
+      <div className='fav-container'>
         <div className='fav-cards'>{favCards}</div>
       </div>
     );

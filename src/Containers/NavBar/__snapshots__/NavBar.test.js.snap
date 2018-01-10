@@ -71,6 +71,14 @@ ShallowWrapper {
 >
           Map
 </NavLink>,
+        <NavLink
+          activeClassName="active"
+          ariaCurrent="true"
+          className="nav"
+          to="/favorites"
+>
+          Favorites
+</NavLink>,
       ],
       "className": "nav-bar",
     },
@@ -134,6 +142,21 @@ ShallowWrapper {
         "rendered": "Map",
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "ariaCurrent": "true",
+          "children": "Favorites",
+          "className": "nav",
+          "to": "/favorites",
+        },
+        "ref": null,
+        "rendered": "Favorites",
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -173,6 +196,14 @@ ShallowWrapper {
             to="/map"
 >
             Map
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="nav"
+            to="/favorites"
+>
+            Favorites
 </NavLink>,
         ],
         "className": "nav-bar",
@@ -235,6 +266,21 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Map",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "Favorites",
+            "className": "nav",
+            "to": "/favorites",
+          },
+          "ref": null,
+          "rendered": "Favorites",
           "type": [Function],
         },
       ],

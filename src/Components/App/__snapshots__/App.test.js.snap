@@ -33,6 +33,10 @@ ShallowWrapper {
 />,
         <Route
           component={[Function]}
+          path="/favorites"
+/>,
+        <Route
+          component={[Function]}
           path="/map"
 />,
       ],
@@ -79,6 +83,18 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
+        "key": "Favorites",
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "path": "/favorites",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
         "key": "Map",
         "nodeType": "class",
         "props": Object {
@@ -111,6 +127,10 @@ ShallowWrapper {
           <Route
             component={[Function]}
             path="/search"
+/>,
+          <Route
+            component={[Function]}
+            path="/favorites"
 />,
           <Route
             component={[Function]}
@@ -153,6 +173,18 @@ ShallowWrapper {
           "props": Object {
             "component": [Function],
             "path": "/search",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Favorites",
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "path": "/favorites",
           },
           "ref": null,
           "rendered": null,
