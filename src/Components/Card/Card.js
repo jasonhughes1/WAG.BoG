@@ -5,10 +5,16 @@ import { addFavorites, removeFavorites } from '../../Actions/Actions';
 import PropTypes from 'prop-types';
 
 
-class Card extends React.Component  {
+export class Card extends React.Component  {
   constructor(props) {
     super(props);
     this.state = {active: false};
+  }
+
+  componentDidMount() {
+    if (this.props.favorites.filter(item => item.name === this.props.name).length) {
+      this.setState({active: true});
+    }
   }
 
   filterFavs = (favIndex) => {

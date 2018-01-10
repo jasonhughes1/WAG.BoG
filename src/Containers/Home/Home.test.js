@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Home } from './Home';
+import { Home, mapStateToProps } from './Home';
 
 describe('Home tests', () => {
   let home;
@@ -9,7 +9,7 @@ describe('Home tests', () => {
     home = shallow(
       <Home
         dispatch={mockFunc}
-        dogs={['pups']}
+        dogs={[['pups']]}
         history={{key: 'value'}}
         location={{key: 'value'}}
         match={{key: 'value'}}
@@ -17,11 +17,21 @@ describe('Home tests', () => {
   });
 
 
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(home).toMatchSnapshot();
   });
 
-  it.skip('Should be defined', () => {
+  it('Should be defined', () => {
     expect(home).toBeDefined();
+  });
+});
+
+describe('map state to props', () => {
+  it('should receive dogs from the store', () => {
+    const mockStore = {
+      dogs: [{name: 'Brooklyn'}]
+    };
+    const expected = mapStateToProps(mockStore);
+    expect(expected.dogs).toEqual(mockStore.dogs);
   });
 });

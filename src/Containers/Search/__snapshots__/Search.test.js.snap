@@ -76,7 +76,7 @@ ShallowWrapper {
           <div
                     className="dog-cards"
           >
-                    <Connect(Component)
+                    <Connect(Card)
                               breed={undefined}
                               city={undefined}
                               name={undefined}
@@ -184,7 +184,7 @@ ShallowWrapper {
           "children": <div
             className="dog-cards"
 >
-            <Connect(Component)
+            <Connect(Card)
                         breed={undefined}
                         city={undefined}
                         name={undefined}
@@ -203,7 +203,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <Connect(Component)
+              <Connect(Card)
                 breed={undefined}
                 city={undefined}
                 name={undefined}
@@ -280,7 +280,7 @@ ShallowWrapper {
             <div
                         className="dog-cards"
             >
-                        <Connect(Component)
+                        <Connect(Card)
                                     breed={undefined}
                                     city={undefined}
                                     name={undefined}
@@ -388,7 +388,7 @@ ShallowWrapper {
             "children": <div
               className="dog-cards"
 >
-              <Connect(Component)
+              <Connect(Card)
                             breed={undefined}
                             city={undefined}
                             name={undefined}
@@ -407,7 +407,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <Connect(Component)
+                <Connect(Card)
                   breed={undefined}
                   city={undefined}
                   name={undefined}

@@ -8,7 +8,9 @@ export class Home extends Component {
   render() {
     if (!this.props.dogs.length) {
       return (
-        <div>wait</div>
+        <div>
+          <img alt='golden retreiver gif' className='golden-gif' src={ require('../../Images/7LKQLPM.gif')}/>
+        </div>
       );
     } else {
       const dogCards = this.props.dogs[0].map((dog, index) => {
@@ -26,11 +28,10 @@ export class Home extends Component {
       });
       return (
         <div className='card-container'>
-          <div className='image'></div>
+          <img className='home-image' src={ require('../../Images/ken-reid-290760_Fotor.jpg')}/>
           <div className='dog-cards'>{dogCards}</div>
         </div>
       );
-
     }
   }
 }

@@ -21,6 +21,7 @@ export class NavBar extends Component {
         <NavLink className='nav' exact to='/'>Home</NavLink>
         <NavLink className='nav' to='/search'>Search</NavLink>
         <NavLink className='nav' to='/map'>Map</NavLink>
+        <NavLink className='nav' to='/favorites'>Favorites</NavLink>
       </div>
     );
   }

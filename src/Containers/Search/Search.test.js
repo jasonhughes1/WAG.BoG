@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Search } from './Search';
+import { Search, mapStateToProps, mapDispatchToProps } from './Search';
 
 describe('Search tests', () => {
   let search;
@@ -24,5 +24,38 @@ describe('Search tests', () => {
 
   it('Should be defined', () => {
     expect(search).toBeDefined();
+  });
+});
+
+describe('map state to props', () => {
+  it('should receive dogs from the store', () => {
+    const mockStore = {
+      dogs: [{name: 'Brooklyn'}]
+    };
+    const expected = mapStateToProps(mockStore);
+    expect(expected.dogs).toEqual(mockStore.dogs);
+  });
+
+  it('should receive searchForDogs from the store', () => {
+    const mockStore = {
+      searchForDogs: []
+    };
+    const expected = mapStateToProps(mockStore);
+    expect(expected.searchForDogs).toEqual(mockStore.searchForDogs);
+  });
+});
+
+describe('mapDispatchToProps', () => {
+  let mockDispatch;
+  let result;
+
+  beforeEach(() => {
+    mockDispatch = jest.fn();
+    result = mapDispatchToProps(mockDispatch);
+  });
+
+  it('should call dispatch when searchCurrentDogs is called', () => {
+    result.searchCurrentDogs();
+    expect(mockDispatch).toHaveBeenCalled();
   });
 });
