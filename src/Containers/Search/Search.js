@@ -42,9 +42,9 @@ export class Search extends Component {
           <div className='header-container'>
             <h1 className='whos'>Whos a good boy, or girl?</h1>
             <h2 className='search-for'>Search for your dog here</h2>
-            <input className='search' placeholder='Please search by zip code' onChange={(event) => this.handleChange(event)} />
+            <input className='search' placeholder='Please search by zip code or city and state' onChange={(event) => this.handleChange(event)} />
             <button className='button' onClick={ () =>  this.props.searchCurrentDogs(location) }>Search!</button>
-            <h3 className='no-dogs'>No dogs at this location, please try another zip code!</h3>
+            <h3 className='no-dogs'>No dogs at this location, please try again!</h3>
           </div>
         </div>
       );
