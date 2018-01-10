@@ -22,3 +22,6 @@
 .dog-cards {
   background-image: url("../../Images/jonathan-forage-367660.jpg");
   background-size: contain; }
+
+.no-dogs {
+  color: red; }

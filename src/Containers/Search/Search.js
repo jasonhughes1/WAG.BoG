@@ -35,22 +35,36 @@ export class Search extends Component {
     });
 
     const { location } = this.state;
-    return (
-      <div>
-        <div className='header-container'>
-          <h1 className='whos'>Whos a good boy, or girl?</h1>
-          <h2 className='search-for'>Search for your dog here</h2>
-          <input className='search' placeholder='Please search by zip code' onChange={(event) => this.handleChange(event)} />
-          <button className='button' onClick={ () =>  this.props.searchCurrentDogs(location) }>Search!</button>
+    if (!this.props.searchForDogs.length) {
+
+      return (
+        <div>
+          <div className='header-container'>
+            <h1 className='whos'>Whos a good boy, or girl?</h1>
+            <h2 className='search-for'>Search for your dog here</h2>
+            <input className='search' placeholder='Please search by zip code' onChange={(event) => this.handleChange(event)} />
+            <button className='button' onClick={ () =>  this.props.searchCurrentDogs(location) }>Search!</button>
+            <h3 className='no-dogs'>No dogs at this location, please try another zip code!</h3>
+          </div>
         </div>
-        <div className='card-container'>
-          <div className='dog-cards'>{dogCards}</div>
+      );
+    } else {
+      return (
+        <div>
+          <div className='header-container'>
+            <h1 className='whos'>Whos a good boy, or girl?</h1>
+            <h2 className='search-for'>Search for your dog here</h2>
+            <input className='search' placeholder='Please search by zip code' onChange={(event) => this.handleChange(event)} />
+            <button className='button' onClick={ () =>  this.props.searchCurrentDogs(location) }>Search!</button>
+          </div>
+          <div className='card-container'>
+            <div className='dog-cards'>{dogCards}</div>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
-
 
 
 export const mapStateToProps = (store) => {
