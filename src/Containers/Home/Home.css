@@ -8,7 +8,13 @@
   height: 100vh;
   width: 100vw; }
 
-.image {
-  height: 500px;
+.home-image {
   background-size: cover;
-  background-image: url("../../Images/ken-reid-290760_Fotor.jpg"); }
+  height: 500px;
+  width: 600px;
+  align-self: center; }
+
+.card-container {
+  background-color: black;
+  display: flex;
+  flex-direction: column; }

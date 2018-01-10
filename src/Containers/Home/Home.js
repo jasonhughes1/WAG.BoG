@@ -28,11 +28,10 @@ export class Home extends Component {
       });
       return (
         <div className='card-container'>
-          <div className='image'></div>
+          <img className='home-image' src={ require('../../Images/ken-reid-290760_Fotor.jpg')}/>
           <div className='dog-cards'>{dogCards}</div>
         </div>
       );
-
     }
   }
 }

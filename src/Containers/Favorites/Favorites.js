@@ -10,23 +10,32 @@ export class Favorites extends Component {
   }
 
   render() {
-    const favCards = this.props.favorites.map((dog, index) => {
-      return <Card
-        key={index}
-        name={dog.name}
-        breed={dog.breed}
-        sex={dog.sex}
-        picture={dog.picture}
-        street={dog.street}
-        city={dog.city}
-        state={dog.state}
-      />;
-    });
-    return (
-      <div className='fav-container'>
-        <div className='fav-cards'>{favCards}</div>
-      </div>
-    );
+    if (!this.props.favorites.length) {
+      return (
+        <div>
+          <img alt='gif showing that there are no favorites' className='fav-gif' src={require('../../Images/fav.gif')}/>
+        </div>
+      );
+    } else {
+
+      const favCards = this.props.favorites.map((dog, index) => {
+        return <Card
+          key={index}
+          name={dog.name}
+          breed={dog.breed}
+          sex={dog.sex}
+          picture={dog.picture}
+          street={dog.street}
+          city={dog.city}
+          state={dog.state}
+        />;
+      });
+      return (
+        <div className='fav-container'>
+          <div className='fav-cards'>{favCards}</div>
+        </div>
+      );
+    }
   }
 }
 
