@@ -1,3 +1,16 @@
+## Module 3 Personal Project, Turing School of Software and Design
+
+## Wag.Bog - Who's a Good Boy, Or Girl?
+
+### Built With:
+React, Redux, HTML, CSS
+
+### Goals: 
+Be able to seach by city or zip code to find a good boy or girl to call your own. Have the ability to favorite any dog you'd like, to make an extremely tough decision a little easier. 
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
